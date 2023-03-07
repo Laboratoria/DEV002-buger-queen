@@ -1,0 +1,7 @@
+.bttn{
+    color: black;
+    background-color: white;
+}
+.bttn>p{
+    pointer-events: none;
+}
