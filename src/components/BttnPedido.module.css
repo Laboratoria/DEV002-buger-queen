@@ -1,0 +1,32 @@
+.bttn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 500;
+}
+.signo{
+    background-color: #FFB01B;
+    border-color: transparent;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size:x-large
+}
+.signos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.icono{
+    background-image: url("./imagenes/delete.png");
+    background-size: cover;
+    background-position: center;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}

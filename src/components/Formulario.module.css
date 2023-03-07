@@ -1,0 +1,72 @@
+.fondo{
+    display: flex;
+    justify-content: space-around;
+
+}
+.headMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.color{
+    background-color: #FFB01B ;
+    /* color: white; */
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 20px 20px 0 0 ;
+    border-color: #FFB01B;
+  
+}
+.sinColor{
+    background-color: #FED483;
+    height: 50px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.menu{
+width: 30%;
+}
+.form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+.pedido{
+    background-color: #3DDB72;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+
+}
+.lista{
+    background-color: #3DDB72;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.borrar, .enviar{
+    padding: 20px 30px;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.borrar{
+    background-color: #F86A6C;
+}
+.enviar{
+    background-color: #3DDB72 ;
+    width: 45%;
+}

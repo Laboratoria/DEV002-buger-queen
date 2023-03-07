@@ -1,0 +1,24 @@
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.burger, .text{
+    color: #EA0000;
+}
+
+.text{
+    font-weight: 700;
+    cursor: pointer;
+}
+.text:hover{
+    font-size: larger;
+}
+
+.user{
+    border: #EA0000 1px solid;
+    border-radius: 20px;
+    padding: 20px;
+}

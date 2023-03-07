@@ -1,7 +1,26 @@
 .bttn{
     color: black;
     background-color: white;
+    margin: 30px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-color: transparent;
+    cursor: pointer;
+}
+.bttn:hover{
+    padding: 13px 33px;
 }
 .bttn>p{
     pointer-events: none;
+}
+.menu{
+    background-color: #FFB01B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    
 }
