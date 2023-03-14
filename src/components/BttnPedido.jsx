@@ -5,6 +5,7 @@ export function BttnPedido({item,price, quantity, id, onDelete}){
     const [cantidad, setCantidad]=useState(1);
     function Mas(e){
         e.preventDefault();
+       
         setCantidad(cantidad+1)
     }
     function Menos(e){

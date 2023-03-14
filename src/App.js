@@ -1,32 +1,26 @@
 // import logo from './logo.svg';
+// import { useNavigate, Link } from 'react-router-dom';
 import './App.css';
 import { Encabezado } from './components/Encabezado';
 import { Formulario } from './components/Formulario';
-// import menu from './components/Menu';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           holi <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import { Login } from './components/login/Login';
+import { Selection } from './components/Area/Selection';
+import { Kitchen } from './components/Kitchen/Kitchen';
 
 
 
+export function Inicio(){
+  return(
+      <Login>        
+      </Login>
+  )
+}
+
+export function Area(){
+  return(
+    < Selection/>
+  )
+}
 export function App(){
 
   return (
@@ -39,4 +33,8 @@ export function App(){
   );
 }
 
-
+export function Cocina(){
+  return(
+    <Kitchen/>
+  )
+}

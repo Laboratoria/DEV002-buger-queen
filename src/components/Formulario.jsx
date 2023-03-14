@@ -56,6 +56,9 @@ export function Formulario(){
     const [Lista, setLista] = useState([])
     // const[Cantidad, setCantidad]=useState(1)
 
+    function handleInputChange(e) {
+        setCliente(e.target.value);
+}
     function ClickPedido(e){
         console.log(e.target.children[0].innerText)
         console.log(e.target.children[1].innerText)
@@ -63,6 +66,7 @@ export function Formulario(){
 
         const newLista={
             id: e.target.id,
+            // quantity: Cantidad,
             item: e.target.children[0].innerText,
             price:e.target.children[1].innerText
         }
@@ -90,6 +94,24 @@ export function Formulario(){
 
         }
     }
+    function Cocina(e){
+        e.preventDefault()
+        console.log(Lista)
+        console.log(e)
+        // console.log(e.target.form.children[1].children[0].children[1].children[1].innerText)
+        // console.log(e.target.form.children[1].children[1].children[1].children[1].innerText)
+        const nuevo = [...Lista]
+        const nuevoQ= nuevo.map((item, i)=>{
+          return { id: item.id,
+            quantity: e.target.form.children[1].children[i].children[1].children[1].innerText,
+            cliente:Cliente,
+            item: item.item,
+            price:item.price
+        }
+        })
+        setLista(nuevoQ)
+        console.log(nuevoQ)
+    }
     return (
         <div className={styles.fondo}>
             <div className={styles.menu}>
@@ -112,7 +134,7 @@ export function Formulario(){
             <form className={styles.form}>
                 <div id="head" className={styles.pedido}>
                     <p id="pedido">Pedido #<span>1</span></p>
-                    <InputForm value={Cliente} placeholder="Nombre del cliente" ></InputForm>
+                    <InputForm value={Cliente} placeholder="Nombre del cliente" handleInputChange={handleInputChange} ></InputForm>
                 </div>
 
                 <div id="products" className={styles.lista}>
@@ -128,10 +150,11 @@ export function Formulario(){
                 </div>
                 <div className={styles.botones}>
                     <button className={styles.borrar} onClick={Borrar}>Borrar pedido</button>
-                    <button className={styles.enviar} type="submit">Enviar a cocina</button>
+                    <button className={styles.enviar} type="submit" onClick={Cocina}>Enviar a cocina</button>
                 </div>
                 
             </form>
         </div>
+        // target.form.children[1].children[0].children[1].children[1].innerText
     )
 }

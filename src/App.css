@@ -6,6 +6,9 @@ html{
   height: 100vh;
   /* background-color: #F7ECDB; */
 }
+:root{
+  --naranja--: #FFB01B;
+}
 
 .superior{
   display: flex;
