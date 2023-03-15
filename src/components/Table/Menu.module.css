@@ -21,6 +21,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
+    overflow-y: auto;
+    height: 530px;
     
+}
+.menu::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.menu::-webkit-scrollbar:vertical {
+    width:10px;
+}
+.menu::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.menu::-webkit-scrollbar-track {
+    border-radius: 30px;  
 }

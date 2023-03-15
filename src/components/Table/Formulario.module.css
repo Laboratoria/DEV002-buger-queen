@@ -1,6 +1,7 @@
 .fondo{
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
 
 }
 .headMenu{
@@ -27,10 +28,10 @@
 }
 
 .menu{
-width: 30%;
+width: 450px;
 }
 .form{
-    width: 30%;
+    width: 450px;
     display: flex;
     flex-direction: column;
 
@@ -41,7 +42,7 @@ width: 30%;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
-    padding: 20px 40px;
+    padding: 10px 40px;
 
 }
 .lista{
@@ -50,7 +51,25 @@ width: 30%;
     flex-direction: column;
     margin-bottom: 20px;
     padding: 20px 40px;
+    overflow: auto;
+    max-height: 280px;
 
+}
+.lista::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.lista::-webkit-scrollbar:vertical {
+    width:10px;
+}
+.lista::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.lista::-webkit-scrollbar-track {
+    border-radius: 30px;  
 }
 .botones{
     display: flex;
@@ -62,6 +81,7 @@ width: 30%;
     border: transparent;
     border-radius: 10px;
     cursor: pointer;
+
 }
 .borrar{
     background-color: #F86A6C;

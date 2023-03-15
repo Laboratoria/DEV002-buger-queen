@@ -9,15 +9,3 @@ html{
 :root{
   --naranja--: #FFB01B;
 }
-
-.superior{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
-  border: 2px solid black ;
-  padding-left: 20px;
-  padding-right: 20px;
-}

@@ -1,0 +1,43 @@
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.logo{
+    background-image: url("../img/logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+}
+.burger{
+    color: var(--naranja--);
+    display: flex;
+    gap: 10px;
+}
+
+.text, .user{
+    color: white;
+    /* font-weight: 700; */
+    cursor: pointer;
+}
+.text:hover{
+    font-size: larger;
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+}
+.perfil{
+    background-image: url("../img/perfil.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}

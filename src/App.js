@@ -1,11 +1,8 @@
-// import logo from './logo.svg';
-// import { useNavigate, Link } from 'react-router-dom';
 import './App.css';
-import { Encabezado } from './components/Encabezado';
-import { Formulario } from './components/Formulario';
 import { Login } from './components/login/Login';
-import { Selection } from './components/Area/Selection';
+import { Selection } from './components/Areas/Selection';
 import { Kitchen } from './components/Kitchen/Kitchen';
+import { Table } from './components/Table/Table';
 
 
 
@@ -21,15 +18,10 @@ export function Area(){
     < Selection/>
   )
 }
-export function App(){
+export function Mesas(){
 
   return (
-    <div className='App'>
-      <Encabezado></Encabezado>
-      <Formulario></Formulario>
-
-    </div>
-
+    <Table/>
   );
 }
 

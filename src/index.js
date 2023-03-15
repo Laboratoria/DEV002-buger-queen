@@ -6,14 +6,14 @@ import {
   } from "react-router-dom";
 
 import './index.css';
-import {App, Area, Cocina, Inicio} from './App';
+import {Mesas, Area, Cocina, Inicio} from './App';
 // import { Formulario } from "./components/Formulario";
 
 // import reportWebVitals from './reportWebVitals';
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Inicio></Inicio>
+        element: <Inicio/>
     },
     {
         path:"/Area",
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     },
     {
         path:"/Area/Mesas",
-        element:<App></App>
+        element:<Mesas/>
     },
     {
         path:"/Area/Cocina",

@@ -23,7 +23,7 @@
     
 }
 .icono{
-    background-image: url("./img/delete.png");
+    background-image: url("../img/delete.png");
     background-size: cover;
     background-position: center;
     width: 27px;

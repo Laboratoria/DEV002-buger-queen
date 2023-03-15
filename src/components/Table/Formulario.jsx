@@ -8,52 +8,13 @@ import almuerzo from "./almuerzo.json"
 
 import styles from "./Formulario.module.css"
 
-// export function Formulario(){
-//     const [tittle, setTitle]= useState ("Hola");
-//     const [todos, setTodos]= useState([]);
-
-//     function handleInputChange(e) {
-//         setTitle(e.target.value);
-//       }
-    
-//     function handleSubmit(e){
-//         e.preventDefault();
-//         const newTodo={
-//             tittle: tittle,
-//             completed: false
-//         };
-//         setTodos([...todos,newTodo]);
-//         setTitle("");
-//     }
-//     return (
-//         <div className="Container">
-            
-//             <form onSubmit={handleSubmit} className="todoCreateForm">
-//                 <input
-//                 onChange={handleInputChange}
-//                 value={tittle}
-//                 className="todoInput"
-//                 />
-//                 <input value="Create todo" type={"submit"} className="buttonCreate" />
-//             </form>
-//             <div className="Pedidos">
-//                 {
-//                     todos.map((item=>(
-//                         <div>{item.tittle}</div>
-//                     )))
-//                 }
-//             </div>
-
-//         </div>
-//     )
-// }
-
 export function Formulario(){
     const[Productos, setProductos]=useState(desayuno)
     const[buttonStyle1,setButtonStyle1]=useState(styles.color)
     const[buttonStyle2,setButtonStyle2]=useState(styles.sinColor)
     const[Cliente, setCliente]=useState("")
     const [Lista, setLista] = useState([])
+    const[total, setTotal]= useState(0)
     // const[Cantidad, setCantidad]=useState(1)
 
     function handleInputChange(e) {
@@ -61,26 +22,46 @@ export function Formulario(){
 }
     function ClickPedido(e){
         console.log(e.target.children[0].innerText)
-        console.log(e.target.children[1].innerText)
+        let precio=e.target.children[1].innerText
+        var regex = /(\d+)/g;
+        console.log(precio.match(regex)[0])
+        let Price=precio.match(regex)[0]
         // console.log(e.target.id)
 
         const newLista={
             id: e.target.id,
             // quantity: Cantidad,
             item: e.target.children[0].innerText,
-            price:e.target.children[1].innerText
+            price:Price
         }
         setLista([...Lista,newLista])
+
+        setTotal(total+Number(Price))
     }
     function Borrar(e){
         // e.preventDefault();
         setCliente("");
         setLista([]);
     }
+    function Mas(e, newCantidad, newPrice, numero){
+        console.log(newCantidad)
+        console.log(newPrice)
+        console.log(numero)
+        setTotal(total+numero)
+    }
+
+    function Menos(numero){
+        setTotal(total-numero)
+    }
 
     function Delete(id){
         const copy=Lista.filter((item) => item.id !== id)
         setLista(copy)
+
+        let element= Lista.filter((item)=> item.id == id)
+        let priceElement=element[0].price
+
+        setTotal(total-Number(priceElement))
     }
     function cambioStyle(){
         if(buttonStyle1===styles.sinColor){
@@ -98,15 +79,19 @@ export function Formulario(){
         e.preventDefault()
         console.log(Lista)
         console.log(e)
+
         // console.log(e.target.form.children[1].children[0].children[1].children[1].innerText)
         // console.log(e.target.form.children[1].children[1].children[1].children[1].innerText)
         const nuevo = [...Lista]
         const nuevoQ= nuevo.map((item, i)=>{
+            let cantidad=e.target.form.children[1].children[i].children[1].children[1].innerText;
+            let precio= item.price
           return { id: item.id,
-            quantity: e.target.form.children[1].children[i].children[1].children[1].innerText,
+            quantity: cantidad,
             cliente:Cliente,
             item: item.item,
-            price:item.price
+            price:precio,
+            subtotal: cantidad*precio
         }
         })
         setLista(nuevoQ)
@@ -130,7 +115,7 @@ export function Formulario(){
                 <Menu array={Productos} callback={ClickPedido} />
             </div>
             
-            {/* <div>{Menu(desayuno,ClickPedido)}</div> */}
+
             <form className={styles.form}>
                 <div id="head" className={styles.pedido}>
                     <p id="pedido">Pedido #<span>1</span></p>
@@ -140,13 +125,13 @@ export function Formulario(){
                 <div id="products" className={styles.lista}>
                     {
                         Lista.map(((item,i)=>(
-                            <BttnPedido key={i} id={item.id} item={item.item} price={item.price} onDelete={Delete} />
+                            <BttnPedido key={i} id={item.id} item={item.item} price={item.price} onDelete={Delete} functionMas={Mas} functionMenos={Menos} />
                         )))
                     }
                 </div>
                 <div className={styles.pedido}>
                     <p>TOTAL:</p>
-                    <p>{}</p>
+                    <p>S/.{total}</p>
                 </div>
                 <div className={styles.botones}>
                     <button className={styles.borrar} onClick={Borrar}>Borrar pedido</button>
@@ -155,6 +140,6 @@ export function Formulario(){
                 
             </form>
         </div>
-        // target.form.children[1].children[0].children[1].children[1].innerText
+
     )
 }
