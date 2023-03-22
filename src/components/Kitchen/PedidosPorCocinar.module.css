@@ -1,0 +1,23 @@
+.fondo{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+.texto{
+ color: white ;
+ width: 200px;
+ text-align: center;
+}
+ .izquierda, .derecha{
+    width: 450px;
+    height: auto;
+    margin-top: 20px;
+
+ }
+ 
+ .derecha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }

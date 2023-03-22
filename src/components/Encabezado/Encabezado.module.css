@@ -11,7 +11,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     width: 45px;
-    height: 45px;
+    /* height: 45px; */
 }
 .burger{
     color: var(--naranja--);
@@ -19,19 +19,17 @@
     gap: 10px;
 }
 
-.text, .user{
-    color: white;
-    /* font-weight: 700; */
-    cursor: pointer;
-}
 .text:hover{
     font-size: larger;
 }
 .user{
+     color: white;
+    /* font-weight: 700; */
+    cursor: pointer;
+    text-transform:capitalize;
     display: flex;
     align-items: center;
     gap: 5px;
-    text-transform: uppercase;
 }
 .perfil{
     background-image: url("../img/perfil.png");
@@ -40,4 +38,9 @@
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
+}
+.logout{
+    background-color: aliceblue;
+    width: 200px;
+    height: 50px;
 }

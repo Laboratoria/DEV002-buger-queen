@@ -10,16 +10,16 @@
     justify-content: space-between;
 }
 .color{
-    background-color: #FFB01B ;
+    background-color: var(--naranja--) ;
     /* color: white; */
     font-weight: 600;
     padding: 20px 40px;
     border-radius: 20px 20px 0 0 ;
-    border-color: #FFB01B;
+    border-color: var(--naranja--);
   
 }
 .sinColor{
-    background-color: #FED483;
+    background-color: var(--naranja-suave--);
     height: 50px;
     padding: 10px 30px;
     border-radius: 20px;
@@ -37,7 +37,7 @@ width: 450px;
 
 }
 .pedido{
-    background-color: #3DDB72;
+    background-color: var(--verde--);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -46,7 +46,7 @@ width: 450px;
 
 }
 .lista{
-    background-color: #3DDB72;
+    background-color: var(--verde--);
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;

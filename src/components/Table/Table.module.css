@@ -13,3 +13,24 @@
     align-items: center;
     justify-content: center; */
 }
+
+.color{
+    background-color: var(--naranja-oscuro-brown--) ;
+    /* color: white; */
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 20px 20px 0 0 ;
+    border-color: var(--naranja--);
+    text-transform: uppercase;
+    color: white;
+
+}
+.sinColor{
+    color: white;
+    /* font-weight: 700; */
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.sinColor:hover{
+    font-size: larger;
+}
