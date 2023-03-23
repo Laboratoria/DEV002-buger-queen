@@ -1,0 +1,7 @@
+.PedidosListos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px,330px));
+    padding-left: 30px;
+    padding-right: 30px;
+    gap:30px
+}

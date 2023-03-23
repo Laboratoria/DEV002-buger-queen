@@ -1,0 +1,24 @@
+.cardListo{
+    background-color: var(--naranja--);
+    width: 320px;
+    height: 230px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.cardInter{
+    background-color: white;
+    border-radius: 20px;
+    /* padding: 20px */
+    width: 250px;
+    cursor: pointer;
+}
+.cardInter:hover{
+    padding: 10px;
+}
+.cardInter>div{
+    pointer-events: none;
+}
+.space{
+    margin-left: 20px 
+}

@@ -10,15 +10,7 @@ import { SignUp } from "./SignUp";
 
 
 export function Login(){
-    // const[email, setEmail]=useState("")
-    // const[contraseña, setContraseña]= useState("")
-        
-    // function OnChangeEmail(e){
-    //     setEmail(e.target.value)
-    // }
-    // function OnChangeContra(e){
-    //     setContraseña(e.target.value)
-    // }
+
     const navigate = useNavigate();
     function Registrate(e){
         e.preventDefault();
@@ -70,34 +62,15 @@ export function Login(){
               alert('Contraseña incorrecta');
             }
           });
-
-        // async ()=>{
-        //   await setDoc(doc(db, "cities", "LA"), {
-        //     name: "Los Angeles",
-        //     state: "CA",
-        //     country: "USA"
-        //   });
-          
-        // }
-
     }
     const [log, setLog]=useState(<SignIn Registrate={Registrate} 
-        // email={email}
-        // contraseña={contraseña}
-        // handleInputChangeE={OnChangeEmail} 
-        // handleInputChangeC={OnChangeContra} 
+
         Ingresar={BtnSignIn}
          />)
 
 
          useEffect(() => {
-          // const connection = createConnection(serverUrl, roomId);
-          // connection.connect();
-          // return () => {
-          //   connection.disconnect();
-          // };
-          // CollectionUsers('Andre', emailUser, contraseña, uid)
-          
+
         }, []);
     return (
         <div  className={styles.fondo}>

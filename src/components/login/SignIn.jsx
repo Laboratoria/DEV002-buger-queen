@@ -1,6 +1,6 @@
 // import { Link } from 'react-router-dom'
 // import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import styles from "./Login.module.css" 
 
 export function SignIn({Ingresar, Registrate}){
@@ -12,29 +12,6 @@ export function SignIn({Ingresar, Registrate}){
     function handleInputChangeC(e){
         setContraseña(e.target.value)
     }
-    
-    useEffect(() => {
-        // const connection = createConnection(serverUrl, roomId);
-        // connection.connect();
-        // return () => {
-        //   connection.disconnect();
-        // };
-        
-      }, []);
-
-      // ...
-    
-//     useEffect(() => {
-//     auth.onAuthStateChanged((user) => {
-//       if (user) {
-//         console.log('user is logged in')
-//         setUser(user)
-//       } else {
-//         console.log('user is logged out')
-//         setUser(false)
-//       }
-//     })
-//   }, [])
 
     return (
         <div> 
@@ -46,7 +23,7 @@ export function SignIn({Ingresar, Registrate}){
             <button className={styles.btn} onClick={(e)=>Ingresar(e,email,contraseña)}>Ingresar</button>
             {/* </Link> */}
         </form>
-        <p className={styles.text}>¿No tienes una cuenta? <span className={styles.span} onClick={Registrate}>Regístrate</span></p>
+        {/* <p className={styles.text}>¿No tienes una cuenta? <span className={styles.span} onClick={Registrate}>Regístrate</span></p> */}
     </div>
     )
 }

@@ -1,10 +1,18 @@
-import { ListoParaServirse } from "../../app/firestore"
+import { CambiarPropState, CambiarPropTimeEnCocina, EnviandoHora } from "../../app/firestore"
 import "./CardPedidoLarge.css"
-export function CardPedidoLarge({pedido,quitarPedido}){
+export function CardPedidoLarge({pedido,quitarPedido, MostrarModal}){
     function Listo(e){
         e.preventDefault()
-        ListoParaServirse(pedido.pedido,"Listo para servirse")
+        const date = new Date();
+        const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+        let horita=hour+":"+minutes+":"+seconds
+
+        EnviandoHora(pedido.pedido,horita)
+
+        CambiarPropState(pedido.pedido,"Listo para servirse")
+
         quitarPedido(pedido.pedido)
+        MostrarModal(pedido)
         }
     
     return(

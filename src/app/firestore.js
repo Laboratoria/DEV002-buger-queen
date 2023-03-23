@@ -26,20 +26,22 @@ export const CollectionUsuarios=(id, name, email, contraseña, area)=>setDoc(doc
     area
 })
 
-// --Enviados desde Mesas
+// --Enviados desde Mesas // Collection de pedidos
 const EnviadosMesas="Enviados de mesas"
 
-export const CollectionEnviarPedidos=(id,cliente,mesero, productos, total, time, state)=>setDoc(doc(db,"Enviados de mesas", id),{
+export const CollectionEnviarPedidos=(id,cliente,mesero, productos, total, time, state,timeEnCocina)=>setDoc(doc(db,"Enviados de mesas", id),{
   pedido:id,
   cliente:cliente,
   mesero:mesero,
   productos:productos,
   total:total,
   time:time,
-  state:state
+  state:state,
+  "time en cocina":timeEnCocina
 })
 
-export const getDataDeMesas=(callback)=>{
+// --Traer datos de la colección de pedidos
+export const getDataPedidos=(callback)=>{
   let ordenar=query(collection(db,"Enviados de mesas"), orderBy("pedido","asc"));
   // let normal=collection(db, "Enviados de mesas")
   onSnapshot(ordenar,callback)
@@ -53,20 +55,19 @@ export const EnviandoHora=(id,time)=>{
   })
 }
 
-// --Enviados desde cocina, Listos para servirse
+// --Enviados desde cocina, Listos para servirse// para cambiar el valor de "state" y cambiar el valor de "time en cocina"
 
-export const ListoParaServirse=(id, state)=>{
+export const CambiarPropState=(id, state)=>{
   const documento=doc(db,EnviadosMesas,id)
   updateDoc(documento,{
     state:state
   })
 }
 
-// export const saveTask = (description, uid) => {
-//     // console.log(description);
-//     addDoc(collection(db, 'tasks'), {
-//       uid,
-//       description,
-//       likes: [],
-//     });
-//   };
+// falta añadir propiedad con el único valor en consola
+export const CambiarPropTimeEnCocina=(id, timeEnCocina)=>{
+  const documento=doc(db,EnviadosMesas,id)
+  updateDoc(documento,{
+    "time en cocina": timeEnCocina
+  })
+}

@@ -110,7 +110,7 @@ function handleInputChangePedido(e) {
         function cocinita(e){
             e.preventDefault()
             console.log(nuevoQ)
-            CollectionEnviarPedidos(numeroPedido,Cliente,"",nuevoQ, total,[],"Enviado de Mesa")
+            CollectionEnviarPedidos(numeroPedido,Cliente,"",nuevoQ, total,[],"Enviado de mesa","")
             .then(()=> console.log("se envió Lista"))
             .catch(err=> console.log(err))
     
@@ -126,7 +126,7 @@ function handleInputChangePedido(e) {
             console.log("if")
             console.log(Lista)
             
-            setModalEspacio(<ModalEnviar pedido={numeroPedido} cliente={Cliente} array={nuevoQ} Cancelar={CerrarModal} Enviar={cocinita}/>)
+            setModalEspacio(<ModalEnviar pedido={numeroPedido} cliente={Cliente} array={nuevoQ} Cancelar={CerrarModal} Enviar={cocinita} total={total}/>)
         } else{
             setModalEspacio("")
         } 
