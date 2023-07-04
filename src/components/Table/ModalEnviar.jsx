@@ -12,11 +12,11 @@ export function ModalEnviar({pedido, array, cliente, Cancelar, Enviar, total}){
                         {array.map((elemento, i)=>{
                             return(
                                 <div className="row between" key={i}>
-                                    <p className="textMini" key={i}>{elemento.item}</p>
-                                    <p className="puntos" key={i+1}></p>
-                                    <p className="textMini" key={i+2}>{elemento.quantity}</p>
-                                    <p className="puntos" key={i+3}></p>
-                                    <p className="textMini" key={i+4}>{elemento.subtotal}</p>
+                                    <p className="textMini" >{elemento.item}</p>
+                                    <p className="puntos" ></p>
+                                    <p className="textMini" >{elemento.quantity}</p>
+                                    <p className="puntos" ></p>
+                                    <p className="textMini" >{elemento.subtotal}</p>
                                 </div>
                             )
                         })}

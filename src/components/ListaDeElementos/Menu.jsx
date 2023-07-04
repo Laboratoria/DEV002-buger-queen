@@ -24,7 +24,7 @@ export function Menu ({array, callback, quantity}) {
 
 function ElementoCocina({callback, numero}){
     return(
-        <button className={styles.bttn} onClick={callback}><p key={"01"}>Pedido</p><p key={"02"}>{numero}</p></button>
+        <button className={styles.bttn} onClick={callback}><p >Pedido</p><p>{numero}</p></button>
     )
 }
 export function ListaCocina({array, callback}){
@@ -33,7 +33,7 @@ export function ListaCocina({array, callback}){
             {
                 array.map((element, i)=>{
                     return(
-                        <ElementoCocina key={i} numero={element.pedido} callback={callback}/>
+                        <ElementoCocina key={element.pedido} numero={element.pedido} callback={callback}/>
                     )
                 })
             }

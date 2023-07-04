@@ -90,7 +90,7 @@ function handleInputChangePedido(e) {
  async function MostrarModal(e){
        await e.preventDefault()
         console.log(Lista)
-
+    console.log(e.target.form.children[1].children[1].children[1].children[1].innerText)
         const nuevo = [...Lista]
       const  nuevoQ=  nuevo.map((item, i)=>{
             let cantidad=e.target.form.children[1].children[i].children[1].children[1].innerText;
@@ -126,10 +126,12 @@ function handleInputChangePedido(e) {
             console.log("if")
             console.log(Lista)
             
-            setModalEspacio(<ModalEnviar pedido={numeroPedido} cliente={Cliente} array={nuevoQ} Cancelar={CerrarModal} Enviar={cocinita} total={total}/>)
-        } else{
-            setModalEspacio("")
-        } 
+            setModalEspacio(<ModalEnviar 
+                pedido={numeroPedido} 
+                cliente={Cliente} 
+                array={nuevoQ} 
+                Cancelar={CerrarModal} Enviar={cocinita} total={total}/>)
+        }
         
         
     }
@@ -164,7 +166,7 @@ function handleInputChangePedido(e) {
                 <div id="products" className={styles.lista}>
                     {
                         Lista.map(((item,i)=>(
-                            <BttnPedido key={i} id={item.id} item={item.item} price={item.price} onDelete={Delete} functionMas={Mas} functionMenos={Menos} />
+                            <BttnPedido key={item.id} id={item.id} item={item.item} price={item.price} onDelete={Delete} functionMas={Mas} functionMenos={Menos} />
                         )))
                     }
                 </div>

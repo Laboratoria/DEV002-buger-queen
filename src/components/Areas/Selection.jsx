@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { onAuthStateChanged} from '../../app/auth'
-import { auth } from '../../app/firebase'
+// import { onAuthStateChanged } from '../../app/auth'
+import { auth, onAuthStateChanged } from '../../app/firebase'
 import styles from "./Selection.module.css" 
 
 export function Selection(){

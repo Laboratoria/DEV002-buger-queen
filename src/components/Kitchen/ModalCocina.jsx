@@ -1,22 +1,20 @@
 import { CambiarPropTimeEnCocina } from "../../app/firestore"
 
 export function ModalCocina({Equis, pedido}){
-    let start=pedido.time[0]
-    let last=pedido.time.length
-    let finish=pedido.time[last-1]
-
+    const start=pedido.time[0]
+    const finish= new Date()
     let dividiendoStart=start.split(":")
     let horaStart=Number(dividiendoStart[0])
     let minutosStart=Number(dividiendoStart[1])
     let segStart=Number(dividiendoStart[2])
 
-    let dividiendoFinish=finish.split(":")
-    let horaFinish=Number(dividiendoFinish[0])
-    let minutosFinish=Number(dividiendoFinish[1])
-    let segFinish=Number(dividiendoFinish[2])
+    const [hour, minutes, seconds] = [finish.getHours(), finish.getMinutes(), finish.getSeconds()];
 
-    const tiempo= (horaFinish-horaStart)+":"+(minutosFinish-minutosStart)+":"+(segFinish-segStart)
-    function EnviarTimeCalculado(){
+    const tiempo= (hour-horaStart)+":"+(minutes-minutosStart)+":"+(seconds-segStart)
+    function EnviarTimeCalculado(e){
+        e.preventDefault()
+ 
+
         CambiarPropTimeEnCocina(pedido.pedido,tiempo)
         Equis()
     }

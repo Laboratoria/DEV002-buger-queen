@@ -7,7 +7,7 @@ export function OpcionesPerfil({Modal}){
 
     return(
         <div className={styles.box}>
-            <button className={styles.btn}>Perfil</button>
+            {/* <button className={styles.btn}>Perfil</button> */}
             <button onClick={Modal}  className={styles.btn}>Salir</button>
         </div>
     )

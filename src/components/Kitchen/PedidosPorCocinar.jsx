@@ -7,7 +7,6 @@ import styles from "./PedidosPorCocinar.module.css"
 
 export function PedidosPorCocinar(){
     const[pedido,setPedido]=useState(<p className={styles.texto}>Selecciona un pedido para visualizarlo</p>)
-    // const[tiempo,setTiempo]=useState(0)
     const[lista,setLista]=useState([])
     const[modal,setModal]=useState("")
     function CerrarModal(){
@@ -19,7 +18,6 @@ export function PedidosPorCocinar(){
 
     function  clickPedido(e){
         e.preventDefault()
-        console.log(e)
         let number= e.target.children[1].innerText
 
         const date = new Date();
@@ -40,9 +38,9 @@ export function PedidosPorCocinar(){
         setPedido(<CardPedidoLarge pedido={pedido[0]} quitarPedido={Quitar} MostrarModal={MostrarModal} />) 
 
     }
-    
+   
     useEffect(()=>{
-        const nuevaList = [] ;
+        const nuevaList = [] ; 
         getDataPedidos((querySnapshot)=>{
              querySnapshot.forEach((doc)=> 
                { 
@@ -50,11 +48,9 @@ export function PedidosPorCocinar(){
                 if(task.state==="Enviado de mesa"){
                  nuevaList.push(task)   
                 }
-                
             }
         )
-        setLista(nuevaList)
-          
+        setLista(nuevaList)   
     ;})
 
     },[lista,setLista])

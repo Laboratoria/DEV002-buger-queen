@@ -28,10 +28,10 @@ export function CardPedidoLarge({pedido,quitarPedido, MostrarModal}){
                     <div className="white">
                     {pedido.productos.map((producto, i)=> {
                         return(
-                            <div className="row between" key={i}>
-                                <p className="textMini" key={i}>{producto.item}</p>
-                                <p className="puntos" key={i+1}></p>
-                                <p className="textMini" key={i+2}>{producto.quantity}</p>
+                            <div className="row between" key={"pedido"+i}>
+                                <p className="textMini" >{producto.item}</p>
+                                <p className="puntos" ></p>
+                                <p className="textMini" >{producto.quantity}</p>
                             </div>
                         )
                     })}
