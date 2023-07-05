@@ -40,20 +40,24 @@ export function PedidosPorCocinar(){
     }
    
     useEffect(()=>{
-        const nuevaList = [] ; 
-        getDataPedidos((querySnapshot)=>{
-             querySnapshot.forEach((doc)=> 
+        // const nuevaList = [] ; 
+        const orders=getDataPedidos((querySnapshot)=>{
+            const nuevaList=[] 
+            querySnapshot.forEach((doc)=> 
                { 
                 const task=doc.data()
                 if(task.state==="Enviado de mesa"){
                  nuevaList.push(task)   
                 }
-            }
-        )
-        setLista(nuevaList)   
+            });
+            setLista(nuevaList);
+        
+        return ()=>{
+            orders();
+        }
     ;})
 
-    },[lista,setLista])
+    },[]);
 
     return(
         <div className={styles.fondo}>  
