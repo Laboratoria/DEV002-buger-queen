@@ -19,8 +19,7 @@ export function Formulario(){
     const [Lista, setLista] = useState([])
     const[total, setTotal]= useState(0)
     const [numeroPedido, setNumeroPedido] =useState("")
-    
-    // const[Cantidad, setCantidad]=useState(1)
+
 
     function handleInputChange(e) {
         setCliente(e.target.value);
@@ -165,7 +164,7 @@ function handleInputChangePedido(e) {
 
                 <div id="products" className={styles.lista}>
                     {
-                        Lista.map(((item,i)=>(
+                        Lista.map(((item)=>(
                             <BttnPedido key={item.id} id={item.id} item={item.item} price={item.price} onDelete={Delete} functionMas={Mas} functionMenos={Menos} />
                         )))
                     }
