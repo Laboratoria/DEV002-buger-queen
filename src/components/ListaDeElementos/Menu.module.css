@@ -22,7 +22,8 @@
     align-items: center;
 /* justify-content: center; */
     overflow-y: auto;
-    height: 530px;
+    height: 450px;
+    max-height: 530px;
     
 }
 

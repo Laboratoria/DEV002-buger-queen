@@ -29,7 +29,10 @@ export function Kitchen(){
     return(
         <div className={styles.fondo}>
             <Encabezado  ModalSalir={MostrarModal} Subs={Vistas} Estilos={Stylos} clickVista={()=>{}} /> 
-            <PedidosPorCocinar/>
+            {/* <div className={styles.card}> */}
+              <PedidosPorCocinar/>  
+            {/* </div> */}
+            
             {modal}
 
         </div>
