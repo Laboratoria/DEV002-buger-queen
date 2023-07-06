@@ -1,8 +1,8 @@
 // import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { login } from "../../app/auth";
-import { db, addDoc, collection } from "../../app/firebase";
+import { login } from "../../Firebase/auth";
+import { db, addDoc, collection } from "../../Firebase/firebase";
 // import { CollectionUsers } from "../../app/firestore";
 import styles from "./Login.module.css" 
 import { SignIn } from "./SignIn"

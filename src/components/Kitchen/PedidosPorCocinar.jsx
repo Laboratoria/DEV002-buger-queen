@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { EnviandoHora, getDataPedidos } from "../../app/firestore"
+import { EnviandoHora, getDataPedidos } from "../../Firebase/firestore"
 import { ListaCocina} from "../ListaDeElementos/Menu"
 import { CardPedidoLarge } from "./CardPedidoLarge"
 import { ModalCocina } from "./ModalCocina"

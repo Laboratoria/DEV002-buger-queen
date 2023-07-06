@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getDataPedidos } from "../../../app/firestore";
+import { getDataPedidos } from "../../../Firebase/firestore";
 import { BttnListo } from "./BttnListos";
 import { ModalEntregar } from "./ModalEntregar";
 import "./PedidosListos.css"

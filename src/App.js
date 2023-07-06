@@ -1,10 +1,10 @@
 import './App.css';
-import { Login } from './components/login/Login';
-import { Selection } from './components/Areas/Selection';
-import { Kitchen } from './components/Kitchen/Kitchen';
-import { Table } from './components/Table/Table';
+import { Login } from './Pages/login/Login';
+import { Selection } from './Pages/Areas/Selection';
+import { Kitchen } from './Pages/Kitchen/Kitchen';
+import { Table } from './Pages/Mesas/Table';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './app/firebase';
+import { auth } from './Firebase/firebase';
 import { useNavigate } from 'react-router-dom';
 
 

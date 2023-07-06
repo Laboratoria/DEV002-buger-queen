@@ -1,11 +1,11 @@
 import React from 'react';
-import { getDataDeMesas } from '../../app/firestore';
+import { getDataDeMesas } from '../../Firebase/firestore';
 import styles from "./Menu.module.css"
 // Para Mesas
 function Pedido({elemento, callback, id}){
 
     return (
-        <button  className={styles.bttn} onClick={callback} id={id}><p key={"01"}>{elemento.item}</p><p key={"02"}>S/.{elemento.price}</p></button>
+        <button  className={styles.bttn} onClick={callback} id={id}><p>{elemento.item}</p><p>S/.{elemento.price}</p></button>
         )
 }
 

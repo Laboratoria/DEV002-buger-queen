@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { ModalSalirP } from '../Encabezado/Perfil/ModalSalir';
-import { Encabezado } from '../Encabezado/Encabezado';
-import { Formulario } from './Formulario';
+import { ModalSalirP } from '../../components/Encabezado/Perfil/ModalSalir';
+import { Encabezado } from '../../components/Encabezado/Encabezado';
+import { Formulario } from '../../components/Table/Formulario';
 import styles from "./Table.module.css"
-import { PedidosListos } from './ListaPedido/PedidosListos';
+import { PedidosListos } from '../../components/Table/ListaPedido/PedidosListos';
 
 export function Table(){
     const [modal, setModal]=useState("")

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Encabezado } from "../Encabezado/Encabezado";
-import { ModalSalirP } from "../Encabezado/Perfil/ModalSalir";
+import { Encabezado } from "../../components/Encabezado/Encabezado";
+import { ModalSalirP } from "../../components/Encabezado/Perfil/ModalSalir";
 import styles from "./Kitchen.module.css"
-import { PedidosPorCocinar } from "./PedidosPorCocinar";
+import { PedidosPorCocinar } from "../../components/Kitchen/PedidosPorCocinar";
 
 export function Kitchen(){
     const Vistas=[""]

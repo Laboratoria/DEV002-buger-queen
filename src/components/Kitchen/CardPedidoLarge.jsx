@@ -1,4 +1,4 @@
-import { CambiarPropState, CambiarPropTimeEnCocina, EnviandoHora } from "../../app/firestore"
+import { CambiarPropState, CambiarPropTimeEnCocina, EnviandoHora } from "../../Firebase/firestore"
 import "./CardPedidoLarge.css"
 export function CardPedidoLarge({pedido,quitarPedido, MostrarModal}){
     function Listo(e){

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../../app/auth";
+import { logout } from "../../../Firebase/auth";
 import styles from "./ModalSalir.module.css"
 
 export function ModalSalirP({Equis}){

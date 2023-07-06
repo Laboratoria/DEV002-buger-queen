@@ -1,4 +1,4 @@
-import { CambiarPropState } from "../../../app/firestore"
+import { CambiarPropState } from "../../../Firebase/firestore"
 import "./ModalEntregar.css"
 
 export function ModalEntregar({pedido,QuitarModal, Equis}){

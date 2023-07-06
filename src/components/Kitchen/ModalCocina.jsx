@@ -1,4 +1,4 @@
-import { CambiarPropTimeEnCocina } from "../../app/firestore"
+import { CambiarPropTimeEnCocina } from "../../Firebase/firestore"
 
 export function ModalCocina({Equis, pedido}){
     const start=pedido.time[0]

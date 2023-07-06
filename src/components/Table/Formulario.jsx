@@ -7,7 +7,7 @@ import { Menu } from "../ListaDeElementos/Menu";
 import almuerzo from "./almuerzo.json"
 
 import styles from "./Formulario.module.css"
-import { CollectionEnviarPedidos } from "../../app/firestore";
+import { CollectionEnviarPedidos } from "../../Firebase/firestore";
 import { ModalEnviar } from "./ModalEnviar";
 
 export function Formulario(){
