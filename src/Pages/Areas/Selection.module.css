@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     gap: 150px;
-    background-image:linear-gradient(to bottom ,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7) ), url("../img/fondoLogin.png");
+    background-image:linear-gradient(to bottom ,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7) ), url("../fondoLogin.png");
     background-position: center;
     background-size: cover;
     width: auto;

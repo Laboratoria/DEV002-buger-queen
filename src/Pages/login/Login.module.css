@@ -2,7 +2,7 @@
     --naranja--: #FFB01B;
 } */
 .fondo{
-    background-image:linear-gradient(to bottom ,rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.6) ), url("../img/fondoLogin.png");
+    background-image:linear-gradient(to bottom ,rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.6) ), url("../fondoLogin.png");
     background-position: center;
     background-size: cover;
     width: auto;
@@ -14,7 +14,7 @@
     justify-content: center;
 }
 .logo{
-    background-image: url("../img/logo.png");
+    background-image: url("../logo.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
