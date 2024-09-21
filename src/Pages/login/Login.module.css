@@ -1,63 +1,85 @@
 /* :root{
     --naranja--: #FFB01B;
 } */
-.fondo{
-    background-image:linear-gradient(to bottom ,rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.6) ), url("../fondoLogin.png");
-    background-position: center;
-    background-size: cover;
-    width: auto;
-    height: 100vh;
-    background-repeat: no-repeat; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.fondo {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../fondoLogin.png");
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.logo{
-    background-image: url("../logo.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 250px;
-    height: 250px;
+.logo {
+  background-image: url("../logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 250px;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    align-items: center;
-    margin: 20px;
-}
-
-.input{
-    border-color: transparent;
-    border-bottom: var(--naranja--) 2px solid;
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-.btn{
-    background-color:var(--naranja--);
-    border: transparent;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 15px;
-    margin: 10px;
-    font-weight:600;
-    cursor: pointer;
-
-}
-.tittle,.text{
-    color: white;
-    text-align: center;
-}
-.tittle{
-    font-size: larger;
-    font-weight: 700;
-}
-.span{
-    color:var(--naranja--);
-    font-weight: bold;
-    cursor: pointer;
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  margin: 20px;
+  gap: 10px;
 }
 
+.div_input {
+  background-color: white;
+  border-bottom: var(--naranja--) 2px solid;
+  width: 90%;
+  display: flex;
+}
+.input {
+  /* border-color: transparent; */
+  /* width: 100%; */
+  padding: 10px;
+  border: 0;
+  flex-grow: 1;
+  /* margin-bottom: 10px; */
+}
+.input:active {
+  border: 0;
+}
+.input:focus {
+  border: 0;
+  outline: none;
+}
+.btn {
+  background-color: var(--naranja--);
+  border: transparent;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--rojo--);
+}
+.tittle,
+.text {
+  color: white;
+  text-align: center;
+}
+.tittle {
+  font-size: larger;
+  font-weight: 700;
+}
+.span {
+  color: var(--naranja--);
+  font-weight: bold;
+  cursor: pointer;
+}

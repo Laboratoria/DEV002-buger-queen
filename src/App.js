@@ -1,60 +1,50 @@
-import './App.css';
-import { Login } from './Pages/login/Login';
-import { Selection } from './Pages/Areas/Selection';
-import { Kitchen } from './Pages/Kitchen/Kitchen';
-import { Table } from './Pages/Mesas/Table';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './Firebase/firebase';
-import { useNavigate } from 'react-router-dom';
+import "./App.css";
+import { Login } from "./Pages/login/Login";
+import { Selection } from "./Pages/Areas/Selection";
+import { Kitchen } from "./Pages/Kitchen/Kitchen";
+import { Table } from "./Pages/Mesas/Table";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./Firebase/firebase";
+import { useNavigate } from "react-router-dom";
 
-
-
-export function Inicio(){
-
-  return(
-      <Login>        
-      </Login>
-  )
+export function Inicio() {
+  return <Login />;
 }
 
-export function Area(){
-  const navigate=useNavigate()
+export function Area() {
+  const navigate = useNavigate();
   onAuthStateChanged(auth, async (user) => {
     try {
       if (!user) {
-        navigate('/');
-      } 
+        navigate("/");
+      }
     } catch (error) {
       console.log(error);
     }
   });
-  return(
-    < Selection/>
-  )
+  return <Selection />;
 }
-export function Mesas(){
-  const navigate=useNavigate()
+export function Mesas() {
+  const navigate = useNavigate();
   onAuthStateChanged(auth, async (user) => {
     try {
       if (!user) {
-        navigate('/');
-      } 
+        navigate("/");
+      }
     } catch (error) {
       console.log(error);
     }
   });
-  return (
-    <Table/>
-  );
+  return <Table />;
 }
 
-export function Cocina(){
-  const navigate=useNavigate()
+export function Cocina() {
+  const navigate = useNavigate();
   onAuthStateChanged(auth, async (user) => {
     try {
       if (!user) {
-        navigate('/');
-      } 
+        navigate("/");
+      }
       // else {
       //   return (
       //     <Kitchen/>
@@ -64,7 +54,5 @@ export function Cocina(){
       console.log(error);
     }
   });
-  return(
-    <Kitchen/>
-  )
+  return <Kitchen />;
 }
