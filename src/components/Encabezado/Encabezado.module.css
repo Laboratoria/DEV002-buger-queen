@@ -1,46 +1,79 @@
-.head{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 60px;
+  position: relative;
+  z-index: 5;
+  border-bottom: 2px solid var(--naranja--);
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
-.logo{
-    background-image: url("../img/logo.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 45px;
-    /* height: 45px; */
+.logo {
+  background-image: url("../img/logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
 }
-.burger{
-    color: var(--naranja--);
-    display: flex;
-    gap: 10px;
+.burger {
+  color: var(--naranja--);
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+  align-items: center;
+  margin: 0;
 }
 
-.text:hover{
-    font-size: larger;
+.text:hover {
+  font-size: larger;
 }
-.user{
-     color: white;
-    /* font-weight: 700; */
-    cursor: pointer;
-    text-transform:capitalize;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.user {
+  color: white;
+  /* font-weight: 700; */
+  cursor: pointer;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.perfil{
-    background-image: url("../img/perfil.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
+.perfil {
+  background-image: url("../img/perfil.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
 }
-.logout{
-    background-color: aliceblue;
-    width: 200px;
-    height: 50px;
+.logout {
+  background-color: aliceblue;
+  width: 200px;
+  height: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .head {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+  }
+
+  .head > div {
+    width: 100%;
+  }
+
+  .burger {
+    width: 100%;
+    font-size: 20px;
+  }
+  .user {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 20px;
+  }
 }

@@ -1,20 +1,33 @@
-.box{
-    position: absolute;
-    right: 30px;
-    top:80px;
-    padding: 10px;
-    background-color: aliceblue;
-    width: 100px;
-    height: 100px;
-    border-radius: 0 0 20px 20px;
-    display: flex;
-    flex-direction: column;
-
-
+.box {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  padding: 10px;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
 }
-.btn{
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor: pointer;
-    
+.btn {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: var(--naranja-suave--);
+  border: 0;
+}
+
+.btn:hover {
+  background-color: var(--rojo-suave--);
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    top: 55px;
+    right: 20px;
+  }
 }
