@@ -1,0 +1,49 @@
+.fondoModal{
+    background-color: rgba(0, 0, 0, 0.587) ;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+.Modal{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnX{
+    background-color: transparent;
+    border-color: transparent;
+    /* position:inherit; */
+    color: var(--rojo--);
+    position: relative;
+    right: -110px;
+    top: -10px;
+    font-size: large;
+    cursor: pointer;
+    
+}
+.text{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: larger;
+    width: 80%;
+    text-align: center;
+
+}
+.btn{
+    background-color: var(--rojo--);
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 10px 30px;
+    border-color: transparent;
+    cursor: pointer;
+}

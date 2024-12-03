@@ -1,0 +1,16 @@
+.fondoModal{
+    
+}
+
+.btnX{
+    background-color: transparent;
+    border-color: transparent;
+    /* position:inherit; */
+    color: var(--rojo--);
+    position: relative;
+    width: fit-content;
+    font-size: large;
+    right: -370px;
+    cursor: pointer;
+    
+}

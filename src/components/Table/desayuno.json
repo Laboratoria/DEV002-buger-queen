@@ -1,0 +1,22 @@
+[
+    {
+        "id": "01",
+        "item": "Café americano",
+        "price": "5"
+    },
+    {   
+        "id": "02",
+        "item": "Café con leche",
+        "price": "7"
+    },
+    {   
+        "id": "03",
+        "item": "Sandwich jamon y queso ",
+        "price": "10"
+    },
+    {
+        "id": "04",
+        "item": "Jugo de frutas natural",
+        "price": "7"
+    }
+]
